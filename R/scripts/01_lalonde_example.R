@@ -16,6 +16,7 @@ source("R/functions/drdid_att_panel.R")
 source("R/functions/sla_runner.R")
 source("R/functions/sla_diagnostics.R")
 source("R/functions/sla_plots.R")
+source("R/functions/sla_outputs.R")
 
 
 # ------------------------------------------------------------
