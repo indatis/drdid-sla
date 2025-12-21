@@ -69,3 +69,50 @@ save_sla_plots <- function(summary_df,
 
   invisible(list(p_att = p_att, p_glm = p_glm, p_si = p_si))
 }
+
+save_sla_combined_plot <- function(summary_df,
+                                   prefix,
+                                   out_dir = "outputs/figures",
+                                   width = 8,
+                                   height = 5,
+                                   dpi = 300) {
+
+  ensure_dir(out_dir)
+
+  # Scale factor to overlay glm_pct on ATT axis
+  scale_factor <- max(abs(summary_df$mean_ATT), na.rm = TRUE)
+  if (!is.finite(scale_factor) || scale_factor == 0) scale_factor <- 1
+
+  p_combined <- ggplot2::ggplot(summary_df, ggplot2::aes(x = step)) +
+    # ATT band
+    ggplot2::geom_ribbon(
+      ggplot2::aes(ymin = mean_ATT - sd_ATT, ymax = mean_ATT + sd_ATT),
+      alpha = 0.15
+    ) +
+    ggplot2::geom_line(ggplot2::aes(y = mean_ATT)) +
+    ggplot2::geom_hline(yintercept = 0, linetype = "dashed") +
+    # GLM fallback rescaled
+    ggplot2::geom_line(
+      ggplot2::aes(y = glm_pct * scale_factor),
+      colour = "red"
+    ) +
+    ggplot2::scale_y_continuous(
+      name = "Mean ATT across replications",
+      sec.axis = ggplot2::sec_axis(~ . / scale_factor,
+                                   name = "GLM fallback rate (ps.flag = 2)")
+    ) +
+    ggplot2::labs(
+      title = paste0(prefix, " — ATT stability and IPT convergence"),
+      x = "Subsample size (treated = controls = step)"
+    ) +
+    ggplot2::theme_minimal()
+
+  ggplot2::ggsave(
+    filename = file.path(out_dir, paste0(prefix, "_att_and_glm.png")),
+    plot = p_combined,
+    width = width, height = height, dpi = dpi
+  )
+
+  invisible(p_combined)
+}
+
