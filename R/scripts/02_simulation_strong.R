@@ -16,6 +16,8 @@ source("R/functions/sla_runner.R")
 source("R/functions/sla_diagnostics.R")
 source("R/functions/sla_plots.R")
 source("R/functions/simulate_panel.R")
+source("R/functions/sla_outputs.R")
+
 
 # ---- Generate data (strong effect) ----
 df_long <- simulate_two_period_panel(
