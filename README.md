@@ -1,2 +1,30 @@
 # drdid-sla
 Subsample Ladder Analysis (SLA) for DRDID: diagnostic stability analysis of ATT estimates and IPT convergence in panel Difference-in-Differences.
+
+# Subsample Ladder Analysis for DRDID
+
+This repository implements **Subsample Ladder Analysis (SLA)** for
+Difference-in-Differences estimation using the `DRDID` package.
+
+The method evaluates:
+- stability of ATT estimates as sample size increases,
+- convergence of inverse probability tilting (IPT),
+- fallback behavior to GLM propensity scores,
+- a Stability Index (SI) summarizing robustness.
+
+## Repository structure
+R/functions/ # reusable SLA, DRDID, diagnostics, and plotting functions
+R/scripts/ # driver scripts (Lalonde example, simulations)
+outputs/ # generated figures, tables, and logs
+docs/ # methodological notes and PDF
+
+
+## Requirements
+- R ≥ 4.1
+- Packages: DRDID, dplyr, tidyr, ggplot2
+
+## Usage
+Run the scripts in `R/scripts/` after sourcing functions in `R/functions/`.
+
+## Reference
+See `docs/DRDID_Extension.pdf` for methodological details.
