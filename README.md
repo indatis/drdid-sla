@@ -40,5 +40,5 @@ To reproduce all experiments, from the repository root in R:
 source("R/scripts/01_lalonde_example.R")
 source("R/scripts/02_simulation_strong.R")
 source("R/scripts/03_simulation_null.R")
-```r
+
 
