@@ -13,10 +13,10 @@ The method evaluates:
 - a Stability Index (SI) summarizing robustness.
 
 ## Repository structure
-R/functions/ # reusable SLA, DRDID, diagnostics, and plotting functions
-R/scripts/ # driver scripts (Lalonde example, simulations)
-outputs/ # generated figures, tables, and logs
-docs/ # methodological notes and PDF
+- R/functions/ # reusable SLA, DRDID, diagnostics, and plotting functions
+- R/scripts/ # driver scripts (Lalonde example, simulations)
+- outputs/ # generated figures, tables, and logs
+- docs/ # methodological notes and PDF
 
 
 ## Requirements
