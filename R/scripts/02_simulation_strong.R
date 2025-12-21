@@ -78,3 +78,15 @@ save_sla_plots(
   prefix     = "sim_strong",
   out_dir    = "outputs/figures"
 )
+
+save_sla_tables(
+  sla_res     = sla_res,
+  sla_summary = sla_summary,
+  si_grid     = si_grid,
+  prefix      = "strong",           # change per script
+  out_dir     = "outputs/tables",
+  k_strict    = k_strict,
+  k_tol       = k_tol_05,
+  tol         = 0.05,
+  meta        = list(seed = 123, R = 20, trim_level = 0.995)  # change per script
+)
