@@ -15,6 +15,8 @@ library(ggplot2)
 source("R/functions/drdid_att_panel.R")
 source("R/functions/sla_runner.R")
 source("R/functions/sla_diagnostics.R")
+source("R/functions/sla_plots.R")
+
 
 # ------------------------------------------------------------
 # 0) Build panel-long Lalonde dataset (NSW + CPS)
@@ -116,3 +118,10 @@ p3 <- ggplot(si_grid, aes(x = k0, y = SI)) +
   theme_minimal()
 
 print(p3)
+
+save_sla_plots(
+  summary_df = sla_summary,
+  si_grid    = si_grid,
+  prefix     = "lalonde",
+  out_dir    = "outputs/figures"
+)
