@@ -78,10 +78,12 @@ compute_SI <- function(summary_df,
 compute_SI_grid <- function(summary_df,
                             K = max(summary_df$step),
                             eps = 1e-8) {
-
-  max_step <- max(summary_df$step)
+  
+  min_step <- min(summary_df$step, na.rm = TRUE)
+  max_step <- max(summary_df$step, na.rm = TRUE)
+  
   data.frame(
-    k0 = 1:max_step,
-    SI = sapply(1:max_step, function(k) compute_SI(summary_df, k0 = k, K = K, eps = eps))
+    k0 = min_step:max_step,
+    SI = sapply(min_step:max_step, function(k) compute_SI(summary_df, k0 = k, K = K, eps = eps))
   )
 }
