@@ -100,7 +100,7 @@ save_sla_plots <- function(summary_df,
   # 3) Stability Index
   p_si <- ggplot2::ggplot(si_grid, ggplot2::aes(x = k0, y = SI)) +
     ggplot2::geom_line() +
-    ggplot2::geom_hline(yintercept = 0.9, linetype = "dashed") +
+    ggplot2::geom_hline(yintercept = 0.95, linetype = "dashed") +
     ggplot2::labs(
       title = paste0(prefix, " — Stability Index SI(k0, K)"),
       x = "Initial k0",
