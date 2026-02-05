@@ -27,7 +27,7 @@ run_sla_drdid_panel <- function(df,
                                 control_ids = NULL,
                                 max_steps = NULL,
                                 min_step = 10,
-                                R = 20,
+                                R = 100,
                                 seed = 123,
                                 trim.level = 0.995) {
 
