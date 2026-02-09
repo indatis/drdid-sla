@@ -23,8 +23,6 @@ The method evaluates:
 ## Usage
 Run the scripts in `R/scripts/` after sourcing functions in `R/functions/`.
 
-## Reference
-See `docs/DRDID_Extension.pdf` for methodological details.
 
 ## Reproducibility and execution
 
@@ -35,7 +33,6 @@ To reproduce all experiments, from the repository root in R:
 
 ```r
 source("R/scripts/01_lalonde_example.R")
-source("R/scripts/02_simulation_strong.R")
-source("R/scripts/03_simulation_null.R")
+...
 
 
