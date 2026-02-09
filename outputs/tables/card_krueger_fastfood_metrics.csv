@@ -1,0 +1,2 @@
+"experiment","Kmax","k_strict","k_tol","tol","SI_strict","SI_tol","glm_pct_at_Kmax","ipt_pct_at_Kmax","seed","R","trim_level","dataset"
+"card_krueger_fastfood",75,11,10,0.05,0.945933090457303,0.941976000462315,0,1,123,20,0.995,"Fastfood (loedata)"

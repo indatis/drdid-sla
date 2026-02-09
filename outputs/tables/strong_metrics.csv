@@ -1,0 +1,2 @@
+"experiment","Kmax","k_strict","k_tol","tol","SI_strict","SI_tol","glm_pct_at_Kmax","ipt_pct_at_Kmax","seed","R","trim_level"
+"strong",50,13,10,0.05,0.999220233637044,0.998553161936377,0,1,123,20,0.995

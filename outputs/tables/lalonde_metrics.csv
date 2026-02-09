@@ -1,0 +1,2 @@
+"experiment","Kmax","k_strict","k_tol","tol","SI_strict","SI_tol","glm_pct_at_Kmax","ipt_pct_at_Kmax","seed","R","trim_level"
+"lalonde",297,46,35,0.05,0.972306914280969,0.972255189407078,0,1,123,5,0.995

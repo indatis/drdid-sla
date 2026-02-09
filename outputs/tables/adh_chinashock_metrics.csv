@@ -1,0 +1,2 @@
+"experiment","Kmax","k_strict","k_tol","tol","SI_strict","SI_tol","glm_pct_at_Kmax","ipt_pct_at_Kmax","seed","R","trim_level"
+"adh_chinashock",241,156,104,0.05,0.980810602186954,0.936370214316494,0,1,123,100,0.995
